@@ -1,0 +1,238 @@
+
+
+<!-- 有logo的 头部  -->
+<div class="header_wrapper">
+    <div class="header">
+        <a href="https://ca.sasa.com/SasaWeb/sch/sasa/home.jsp?cm_re=top_logo">
+            <img src="./img/logo.png" class="header_logo">
+        </a>
+        <div class="header_search">
+            <!-- 需要补充 -->
+            <form action="" method="">
+                <input placeholder="搜索" name="qs" id="qs">
+                <i class="header_search_icon"></i>
+            </form>
+            <span class="header_hotkey">
+                <a href="#">SNP</a> |
+                <a href="#">Dr. Jart+</a> |
+                <a href="#">雪花秀</a> |
+                <a href="#">资生堂</a> |
+                <a href="#">伊夫.圣罗兰</a> |
+                <a href="#">面膜</a>
+            </span>
+
+        </div>
+
+        <div id="cart-box" class="header_cart">
+            <i class="header_cart_icon"></i>
+            <!-- 购物车的链接地址 -->
+            <a href="#" class="shop-cart">购物车<em>0</em></a>
+           
+            <div class="content">
+                <div class="content_null" id="content_null">
+                    <p>
+                        购物车中还没有商品，<br>快去挑选心爱的商品吧！
+                    </p>
+                </div>
+                <div class="content_catalog" id="content_catalog">
+                    <div class="rank-list">
+                        <ul id="shoppingCartDetails">
+                            <!-- 每一个li 是一个购物车内的商品 -->
+                            <li class="border-dashed">
+                                <!-- left 是一个图片 -->
+                                <span class="box_left">
+                                    <a href="#">
+                                        <img src="./img/shoppinglist1.jpg" >
+                                    </a>
+                                </span>
+                                <!-- right 有品牌 标题 价格 数量 -->
+                                <span class="box_right">
+                                    <h1>
+                                        <a href="#">悦木之源/修改</a><br>
+                                        <a href="#">悦木之源的标题/修改</a>
+                                    </h1>
+                                    <b class="fon-price">
+                                        US$<span>需要修改</span>
+                                        <em> x 1</em>
+                                    </b>
+                                    <a class="btn-delete">X</a>
+                                </span>
+                            </li>
+                            <li class="border-dashed">
+                                <!-- left 是一个图片 -->
+                                <span class="box_left">
+                                    <a href="#">
+                                        <img src="./img/shoppinglist1.jpg" >
+                                    </a>
+                                </span>
+                                <!-- right 有品牌 标题 价格 数量 -->
+                                <span class="box_right">
+                                    <h1>
+                                        <a href="#">悦木之源/修改</a><br>
+                                        <a href="#">悦木之源的标题/修改</a>
+                                    </h1>
+                                    <b class="fon-price">
+                                        US$<span>需要修改</span>
+                                        <em> x 1</em>
+                                    </b>
+                                    <a class="btn-delete">X</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content_notice">
+                        <div class="fon-price" align="left" style="width:40%">
+                            &nbsp;<span class="fon-MSYH">共</span>
+                            &nbsp;<b><span id="basketitem">改</span></b>
+                            &nbsp;<span class="fon-MSYH">件商品</span>
+                        </div>
+                        <div class="fon-price" align="right" style="width:60%">
+                            <span class="fon-MSYH">共计：</span>
+                            <b>US$<span id="baskettotal">9999.99</span></b>
+                        </div>
+                        <a href="#">
+                            <div class="btn_checkout">查看购物车</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 导航栏 -->
+<div class="category_wrapper">
+    <div class="container_int category">
+        <div class="category_expand">
+<!-- 鼠标移入btn   list显示 -->
+            <div class="category_expand_btn">
+                产品类型
+                <div class="category_expand_arrow"></div>
+                <ul class="category_expand_list">
+                    <li class="category_expand_item" id="category_expand_item_facial">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">面部护理</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">防晒</a></li>
+                            <li class="category_expand_row"><a href="#">精华</a></li>
+                        </ul>
+                    </li>
+                    <li class="category_expand_item" id="category_expand_item_makeup">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">潮流彩妆</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">防晒</a></li>
+                            <li class="category_expand_row"><a href="#">精华</a></li>
+                        </ul>
+                    </li>
+                    <li class="category_expand_item" id="category_expand_item_frag">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">芬芳香水</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">防晒</a></li>
+                            <li class="category_expand_row"><a href="#">精华</a></li>
+                        </ul>
+                    </li>
+                    <li class="category_expand_item" id="category_expand_item_man">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">男士专区</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">防晒</a></li>
+                            <li class="category_expand_row"><a href="#">精华</a></li>
+                        </ul>
+                    </li>
+                    <li class="category_expand_item" id="category_expand_item_care">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">个人护理</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">防晒</a></li>
+                            <li class="category_expand_row"><a href="#">精华</a></li>
+                        </ul>
+                    </li>
+                    <li class="category_expand_item" id="category_expand_item_health">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">健康美肌</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">防晒</a></li>
+                            <li class="category_expand_row"><a href="#">精华</a></li>
+                        </ul>
+                    </li>
+                    <li class="category_expand_item" id="category_expand_item_slim">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">纤体丰胸</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                        </ul>
+                    </li>
+                    <li class="category_expand_item" id="category_expand_item_baby">
+                        <i class="category_expand_item_icon"></i>
+                        <a href="#">孕婴护理</a>
+                        <i class="category_expand_more"></i>
+                        <ul class="category_expand_item_board">
+                            <li class="category_expand_row"><a href="#">面霜</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                            <li class="category_expand_row"><a href="#">化妆水</a></li>
+                            <li class="category_expand_row"><a href="#">面膜</a></li>
+                        </ul>
+                    </li>
+    
+    
+                </ul>
+            </div>
+        </div>
+        <div class="category_link_list">
+            <a href="#">所有品牌</a>
+            <a href="#">新品上市</a>
+            <a href="#">特价清货</a>
+            <a href="#">VIP</a>
+            <a href="#">限时特卖</a>
+            <a href="#">防疫专区</a>
+        </div>
+        <div class="category_sale"></div>
+        <div class="free_shipping">
+            <a href="#" style="color: #fff;">
+                <img src="./img/ico-freeshipping.png" alt="">
+                HK$ 70 包邮
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 返回顶部 -->
+<div id="go-top">
+    <img src="./img/back-to-top.png" alt="返回页首">
+</div>
+
+<script src="./js/header.js"></script>

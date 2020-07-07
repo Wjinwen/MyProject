@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/regist.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <div id="topHeader"></div>
+    <header></header>
+    <div id="regist-main"></div>
+    <footer></footer>
+
+    <script>
+        $(function(){
+            $("#topHeader").load("./topHeader.html");
+            $("#regist-main").load("./regist-main.html");
+            $("header").load("./header.html");
+            $("footer").load("./footer.html");
+            
+        })
+    </script>
+</body>
+</html>

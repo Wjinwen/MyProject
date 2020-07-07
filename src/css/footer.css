@@ -1,0 +1,121 @@
+.promise_wrapper {
+    width: 100%;
+    height: 70px;
+    background-color: #fc2e7a;
+}
+.promise {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+.promise .promise_item {
+    height: 100%;
+    overflow: hidden;
+    margin-right: 64px;
+    float: left;
+    line-height: 70px;
+    color: #fff;
+    font-size: 16px;
+}
+.promise_item a {
+    color: #fff;
+}
+
+.promise_item_icon_delivery {
+    background: url(./../img/promise_delivery.png) no-repeat;
+}
+
+.promise_item_icon_100 {
+    background: url(./../img/promise_100.png) no-repeat;
+}
+
+.promise_item_icon_30days {
+    background: url(./../img/promise_30days.png) no-repeat;
+}
+.promise_item_icon_stock {
+    background: url(./../img/promise_stock.png) no-repeat;
+}
+.promise_item_icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-top: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+.promise_item_info {
+    display: inline-block;
+    height: 100%;
+    line-height: 75px;
+}
+
+.list_178 {
+    font-size: 0.7em;
+    margin-left: 10px;
+}
+
+.footer_info_wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+.footer_info {
+    width: 980px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.footer_info_list {
+    width: 100%;
+    overflow: hidden;
+}
+.footer_info_column {
+    display: block;
+    width: 20%;
+    text-align: left;
+    overflow: hidden;
+    float: left;
+}
+.footer_info_column a, .footer_info_column span {
+    display: block;
+}
+.footer_info_column a:hover{
+    color: #fc2e7a;
+}
+.footer_info_column span {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 12px;
+}
+.footer_info_column a {
+    height: 22px;
+    line-height: 22px;
+    font-size: 13px;
+    color: #999;
+}
+
+.footer_info .footer_info_img {
+    width: 100%;
+    float: left;
+    display: block;
+    margin-top: 30px;
+}
+
+.footer_cpy_wrapper {
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+}
+.footer_cpy {
+    width: 980px;
+    height: calc(100% - 25px);
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.footer_cpy p {
+    color: #eee;
+    height: 16px;
+    margin-bottom: 3px;
+}

@@ -1,0 +1,140 @@
+#Main {
+    margin-top: 20px;
+}
+.margin {
+    width: 1000px;
+    margin: 0 auto;
+}
+#Login{
+    width: 1000px;
+    height: 552px;
+    margin-bottom: 30px;
+}
+#Login .left {
+    width: 490px;
+}
+.left {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#Login .right {
+    width: 490px;
+    border: solid #fdb6cc 1px;
+    height: 550px;
+    -moz-box-shadow: 3px 3px 10px #666666;
+    -webkit-box-shadow: 3px 3px 10px #666666;
+    box-shadow: 3px 3px 10px #666666;
+    background: white;
+}
+.right {
+    display: inline;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+#Login .title {
+    overflow: hidden;
+    _zoom: 1;
+}
+#Login .title a.alter_list {
+    border-left: none;
+    width: 245px;
+}
+#Login .title a {
+    display: inline;
+    float: left;
+    width: 244px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-align: center;
+    color: #ff9dbc;
+    border-bottom: solid #fdb6cc 1px;
+    border-left: solid #fdb6cc 1px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #fef1f5;
+}
+#Login .title em {
+    font-size: 13px;
+    padding-left: 10px;
+}
+#Login .title a.choose {
+    background: white;
+    border-bottom: none;
+}
+
+#Login .content {
+    margin: 43px 35px 0;
+    border-top: solid #fdb6cc 1px;
+    padding: 30px 0 0 0;
+}
+#Login .content .form .item {
+    overflow: hidden;
+    _zoom: 1;
+    padding: 9px 0;
+}
+#Login .content .form .item .box_left {
+    width: 90px;
+}
+.box_left {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#Login .content .form label {
+    font: normal 15px/30px "微软雅黑";
+    color: #f86ea2;
+}
+#Login .content .form .item .box_right {
+    width: 330px;
+}
+.box_right {
+    display: inline;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+.txt-269 {
+    background-position: -95px 0;
+    width: 259px;
+}
+.input_txt {
+    background-image: url(./../img/input-text.gif);
+    background-repeat: no-repeat;
+    display: inline;
+    float: left;
+    padding: 5px;
+}
+.txt-269 input {
+    width: 259px;
+}
+.input_txt input {
+    height: 20px;
+    line-height: 20px;
+    border-width: 0;
+    background: none;
+}
+input {
+    outline: none;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+#Login .content .form .box_right a {
+    color: #f86ea2;
+}
+
+.login_btn {
+    cursor: pointer;
+    background: url(./../img/login-submit.gif) 0 0 no-repeat;
+    width: 180px;
+    height: 30px;
+    border-width: 0;
+    display: inline;
+    float: left;
+}
