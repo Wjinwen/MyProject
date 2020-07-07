@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>商品详情页</title>
     <script src="./js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/adv.css">
-    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/detail-content.css">
     <link rel="stylesheet" href="./css/footer.css">
+
 </head>
 <body>
     <div id="topHeader"></div>
     <header></header>
-    <div id="adv"></div>
     <div id="content"></div>
     <footer></footer>
    
@@ -21,8 +21,7 @@
         $(function(){
             $("#topHeader").load("./topHeader.html");
             $("header").load("./header.html");
-            $("#adv").load("./adv.html");
-            $("#content").load("./content.html");
+            $("#content").load("./detail-content.html");
             $("footer").load("./footer.html");
             
         })

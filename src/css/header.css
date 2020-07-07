@@ -1,9 +1,9 @@
 
-
-body, body * {
+body,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, tabel, caption, tbody, tfoot, thead, tr, td, p {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-size: 13px;
     font-family: "Microsoft Yahei", "Helvetica Neue", " Helvetica", "Arial", sans-serif;
@@ -623,4 +623,8 @@ div#content_catalog .content_notice {
     font-size: 1.5em;
     padding: 5px;
     font-weight: bold;
+}
+
+.slide_item a:hover,.product_item a:hover {
+    color:#fc2e7a ;
 }

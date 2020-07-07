@@ -1,0 +1,375 @@
+#content{
+    background-color: #fff;
+}
+#Main {
+    padding-top: 20px;
+}
+.margin {
+    width: 1000px;
+    margin: 0 auto;
+}
+#Main .location {
+    height: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    font-family: SimSun;
+}
+#Main .location a, #Main .location em {
+    color: #f86ea2;
+}
+#Main em {
+    color: #ff0051;
+}
+b {
+    font-weight: bold;
+}
+#Main .detail-info {
+    border: solid #e0e0e0 1px;
+    padding: 20px 28px 30px;
+    overflow: hidden;
+    _zoom: 1;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+#Main .detail-info .left {
+    width: 375px;
+}
+.left {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#Main a.btn-collect, #Main a.btn-comment {
+    background: url(./../img/detail-info-btn.gif) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-indent: 32px;
+    width: 116px;
+    z-index: 2;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+#Main a.btn-comment {
+    background-position: 0 -48px;
+}
+#Main a.btn-collect:hover{
+    background-position: 0 -24px;
+}
+#Main a.btn-comment:hover {
+    background-position: 0 -72px;
+}
+img {
+    border: none;
+    vertical-align: top;
+}
+#Main .detail-roll {
+    margin-top: 20px;
+}
+#Main .detail-roll .content {
+    padding: 0 20px;
+    overflow: hidden;
+    height: 75px;
+    position: relative;
+}
+
+#Main .detail-roll .content a.prevbtn {
+    left: 0px;
+    background-position: 0 0;
+}
+#Main .detail-roll .content a.prevbtn, #Main .detail-roll .content a.nextbtn {
+    background: url(./../img/detail-roll-btn.gif) 0 0 no-repeat;
+    width: 17px;
+    height: 75px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+}
+#Main .detail-roll .content a.nextbtn {
+    right: 0px;
+    background-position: -17px 0;
+}
+#Main .detail-roll .content li {
+    overflow: hidden;
+    _zoom: 1;
+    height: 75px;
+}
+#Main .detail-info .right {
+    width: 485px;
+}
+.right {
+    display: inline;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+#Main .detail-info .right .title {
+    font: normal 23px/36px "微软雅黑";
+    border-bottom: solid #e0e0e0 1px;
+    padding: 15px 0;
+}
+#Main .detail-info .right .content {
+    font-size: 13px;
+    line-height: 32px;
+    padding: 15px 0;
+    border-bottom: solid #e0e0e0 1px;
+}
+#Main .detail-info .right .content big {
+    font-size: 24px;
+    color: #ee145b;
+}
+.intro-list span {
+    background: none repeat scroll 0 0 #fd327b;
+    border-top: 2px solid #ed145b;
+    color: white;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    margin: 5px 10px 0 0;
+    padding: 0 5px;
+}
+
+#Main .detail-size {
+    width: 322px;
+    padding: 15px 0;
+    background: #eee;
+    margin-top: 35px;
+}
+#Main .detail-size .number-box {
+    overflow: hidden;
+    _zoom: 1;
+    line-height: 21px;
+}
+#Main .detail-size .number-box dt {
+    display: inline;
+    float: left;
+    width: 98px;
+    text-align: right;
+}
+#Main .detail-size .number-box dd {
+    background: url(./../img/number-box.jpg) 0 0 no-repeat;
+    display: inline;
+    float: left;
+    width: 70px;
+    height: 21px;
+}
+#Main .detail-size .number-box span {
+    display: inline;
+    float: left;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+#Main .detail-size .number-box .text {
+    border-width: 0;
+    background: none;
+    width: 28px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    display: inline;
+    float: left;
+}
+#Main .detail-size .number-box span {
+    display: inline;
+    float: left;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+#Detail .left {
+    width: 262px;
+}
+#Detail .right {
+    width: 726px;
+}
+.clear {
+    background: none;
+    border: none;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0px;
+    line-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+}
+.nav-container {
+    height: 40px;
+    padding: 4px 0;
+    z-index: 70;
+    position: relative;
+    vertical-align: top;
+}
+.nav-container .nav-content {
+    background: #f86ea2;
+    height: 40px;
+    width: 707px;
+    padding: 0 0 0 19px;
+}
+.nav-container .nav-content a.choose, .nav-container .nav-content a:hover {
+    font-weight: bold;
+    background: #ff9dbc;
+}
+.nav-container .nav-content a {
+    display: inline;
+    float: left;
+    width: 100px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 1px;
+    color: white;
+    font: normal 14px/40px SimSun;
+}
+.choose {
+    color: #fd327b;
+}
+.nav-container .nav-notice {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 48px;
+}
+.nav-container .nav-notice .box_left, .nav-container .nav-notice .box_text, .nav-container .nav-notice .box_right {
+    display: inline;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    overflow: hidden;
+    margin: 4px 0;
+}
+.nav-container .nav-notice .box_left {
+    width: 20px;
+    background: url(./../img/detail-nav-background.gif) 0 0 no-repeat;
+}
+.nav-container .nav-notice .box_text {
+    background: #ed145b;
+}
+.nav-container .nav-notice .box_text big {
+    display: inline;
+    float: left;
+    font-size: 28px;
+    font-family: Arial;
+}
+.nav-container .nav-notice .box_text a.button {
+    display: inline;
+    float: left;
+    width: 101px;
+    height: 30px;
+    border-width: 0px;
+    background: url(./../img/detail-nav-background.gif) -20px 0 no-repeat;
+    margin: 5px;
+}
+.button {
+    cursor: pointer;
+    border-width: 0;
+}
+
+.nav-container .nav-notice .box_right {
+    width: 3px;
+    margin: 0;
+    height: 48px;
+    line-height: 48px;
+    background: url(./../img/detail-nav-background.gif) -121px 0 no-repeat;
+}
+.sticky {
+    z-index: 100;
+    position: sticky;
+    top: 0px;
+}
+
+#Detail .detail-item {
+    padding: 10px 22px;
+}
+
+#Detail .detail-item .title {
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    border-bottom: solid #ff9dbc 4px;
+    color: #f86ea2;
+}
+#Detail .detail-item .content {
+    margin-top: 20px;
+    line-height: 24px;
+}
+.report-wrap{
+    height: 30px;
+}
+
+
+.slide-node{
+    /* float: left; */
+    display: inline-block;
+    border: solid 3px #fff;
+    margin:0 4px;
+    position: relative;
+    box-sizing:border-box;
+}
+.select-border{
+    border: 3px solid #f86ea2;
+}
+#big_pic{
+    width: 244px; 
+    height: 270px;
+    margin:0 auto;
+    position: relative;
+    left: 0px;
+}
+
+.detail-bigpic{
+    width: 244px;
+    height: 270px;
+    position: absolute;
+    background-color:rgba(0,0,0,0.3);
+    top: 0;
+    left: 375px;
+    background-image: url(./../img/shoppinglist1-1.jpg);
+    background-size: 488px;
+    /* display: none; */
+}
+.mirro{
+    width:122px;
+    height: 135px;
+    background-color:rgba(218, 130, 15, 0.459);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

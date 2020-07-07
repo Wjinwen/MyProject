@@ -1,7 +1,7 @@
 <div class="adv_slide_outerWrapper">
     <div class="adv_slide slide_widget slide_personal_care">
         <div class="adv_slide_head slide_head_personal_care"></div>
-        <div class="adv_slide_content">
+        <div class="adv_slide_content adv1">
             <div class="item_slide_three_btn item_slide_three_left"></div>
             <div class="item_slide_three_btn item_slide_three_right"></div>
             
@@ -163,7 +163,7 @@
 <div class="adv_slide_outerWrapper">
     <div class="adv_slide slide_widget slide_personal_care">
         <div class="adv_slide_head slide_head_new_arrivals"></div>
-        <div class="adv_slide_content">
+        <div class="adv_slide_content adv2">
             <div class="item_slide_three_btn item_slide_three_left"></div>
             <div class="item_slide_three_btn item_slide_three_right"></div>
             
@@ -284,36 +284,102 @@
 
 </div>
 
+<div class="brand_slide_outWrapper">
+    <div class="brand_slide slide_widget slide_featured_brands">
+        <div class="brand_slide_head slide_head_featured_brands"></div>
+        <div class="brand_slide_content">
+            <div class="brand_slide_btn  item_slide_three_left"></div>
+            <div class="brand_slide_btn  item_slide_three_right"></div>
+            <div class="brand_slide_wrapper slide_wrapper">
+                <div class="brand_slide_inner slide_inner">
+                    
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand1.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand2.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand3.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand4.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand5.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand6.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand7.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="brand_slide_item">
+                        <div class="brand_slide_item_wrapper">
+                            <img src="./img/brand8.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 <script>
-    var speed=4,ctimer;
-    clickCarsoule(690);
-    function clickCarsoule(wid){
+    $(function(){
+        $(".item_slide_three .slide_inner").attr("count",0).attr("wid",420).attr("last",630);
+        $(".adv1 .slide_inner").attr("count",0).attr("wid",690).attr("last",920);
+        $(".adv2 .slide_inner").attr("count",0).attr("wid",690).attr("last",920);
+        $(".brand_slide_content .slide_inner").attr("count",0).attr("wid",520).attr("last",920);
         $(".item_slide_three_left").on("click",btnLeftClickHandler);
         $(".item_slide_three_right").on("click",btnRightClickHandler);
-        
-        function btnLeftClickHandler(){
-            clearInterval(ctimer)
-            console.log(1111)
-            var $picList=$(this).siblings(".slide_wrapper").children(".slide_inner");
-            ctimer=setInterval(move,16,-wid,$picList)
-            console.log($picList);
+
+
+        function btnRightClickHandler(){
+            var $ul=$(this).siblings(".slide_wrapper").children(".slide_inner");
+            var cou=($ul.attr("count")-0)-1;
+            var step=$ul.attr("wid")-0;
+            console.log($ul.width());
+            var minCount=Math.floor($ul.width()/step);
+            if(cou<-minCount) {cou=-minCount;}
+            $ul.attr("count",cou); 
+            console.log($ul.css("left"),$ul.attr("count"))        
+            $ul.animate({
+                left:cou==-minCount?($ul.attr("last")-$ul.width()):cou*step,
+            },500);
+            console.log($ul.css("left"),$ul.attr("count"))     
             
         }
-        function btnRightClickHandler(){
-            clearInterval(ctimer)
-            console.log(222)
-            var $picList=$(this).siblings(".slide_wrapper").children(".slide_inner");
-            ctimer=setInterval(move,16,-wid,$picList)
+        function btnLeftClickHandler(){
+            var $ul=$(this).siblings(".slide_wrapper").children(".slide_inner");
+            var cou=($ul.attr("count")-0)+1;
+            if(cou>0) cou=0;
+            $ul.attr("count",cou); 
+            console.log($ul.css("left"),$ul.attr("count"));   
+            $ul.animate({
+                left:cou==0?0:(parseInt($ul.css("left"))+($ul.attr("wid")-0)),
+            },500)
         }
+    })
+        
+        
+        
 
-        function move(X,ul){
-            console.log(3333)
-            console.log(X,ul)
-            var mx=ul.css("left")+speed;
-            if(mx<=-ul.width()) mx=-ul.width();
-            if(mx>=0) mx=0;
-            ul.css({left:mx});
-        }
-    }
+      
 </script>
