@@ -13,16 +13,100 @@
 <body>
     <div id="topHeader"></div>
     <header></header>
-    <div id="regist-main"></div>
+    <div id="regist-main">
+        <div id="Main" class="margin">
+            <div id="Login" class="regist">
+              <div class="left">      
+                <img src="./img/login.jpg" width="490" >
+              </div>
+        
+              <div class="right">
+                  <div class="title">
+                      <a href="./register.html" class="alter_list choose">注册
+                          <em>Registration</em>
+                        </a>
+                        <a href="./login.html">登入
+                            <em>Login</em>
+                        </a>
+                    </div>
+        
+                  <div class="content" style="margin-right:15px; height:500px;">
+                      <form name="registForm" method="POST" action="#" class="form">
+                          <div class="item">
+                                <div class="box_left"><label>账户：</label></div>
+                                <div class="box_right">
+                                    <span class="input_txt txt-269">
+                                        <input type="text" name="email" maxlength="80" value="">
+                                    </span>
+                                </div>
+                          </div>
+                          <div class="item">
+                              <div class="box_left"><label>密码：</label></div>
+                              <div class="box_right">
+                                  <span class="input_txt txt-269">
+                                      <input type="password" name="password" maxlength="80" value="">
+                                    </span>
+                                </div>
+                          </div>
+                         
+                          <div class="item">
+                                <div class="box_left"><label>验证码：</label></div>
+                                <div class="box_right">
+                                    <span class="input_txt txt-95">
+                                        <input type="text" name="capcha" maxlength="80" size="20" value="">
+                                    </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div id="captchaImg">
+
+                                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a class="changeYZM" href="javascript:;" style="line-height:30px">
+                                        <font color="#8d8d8d">看不清,</font> 换一张
+                                    </a>
+                                </div>
+                          </div>
+        
+                          <div class="item">
+                              <div class="box_right">
+                                <input type="checkbox" name="termsOfUse" value="Y">
+                                <b>&nbsp;&nbsp;你已阅读及接受 
+                                    <a href="#" target="_blank" class="link_text">使用条款</a>及
+                                    <a href="#" target="_blank" class="link_text">私隐政策</a>
+                                </b>
+                              </div>
+                          </div>
+        
+                          <div class="item">
+                              <div class="box_right">
+                                  <input type="checkbox" name="newsletter" value="Y">
+                                  <b>&nbsp;&nbsp;我不同意莎莎使用我的个人资料作直接促销</b>  
+                              </div>
+                          </div>
+        
+                          <div class="item">
+                                <div class="box_right">
+                                  <input type="submit" class="regist_btn" value="">
+                                </div>
+                          </div>
+                      </form>
+                  </div>
+        
+              </div>
+              <br class="clear">
+        
+          </div>
+        
+        </div>
+    </div>
     <footer></footer>
 
     <script>
         $(function(){
-            $("#topHeader").load("./topHeader.html");
-            $("#regist-main").load("./regist-main.html");
-            $("header").load("./header.html");
-            $("footer").load("./footer.html");
-            
+            $("#topHeader").load("./page/topHeader.html");
+            $("#captchaImg").load("./page/YZM.html");
+            $("header").load("./page/header.html");
+            $("footer").load("./page/footer.html");
+             $(".changeYZM").on("click",function(){
+                drawPic();
+             })
         })
     </script>
 </body>

@@ -233,7 +233,7 @@ element.style {
 }
 .email_collection input {
     width: 266px;
-    height: 40px;
+    height: 38px;
     border: 0;
     outline: 0;
     position: absolute;
@@ -377,7 +377,7 @@ element.style {
     overflow: hidden;
 }
 .item_slide_three_innner {
-    width: 4200px;
+    width: 4410px;
     height: 100%;
     overflow: hidden;
 }

@@ -1,5 +1,5 @@
 
-body,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, tabel, caption, tbody, tfoot, thead, tr, td, p {
+body,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, tabel, caption, tbody, tfoot, thead, tr, td, p,h1 {
     margin: 0;
     padding: 0;
 }

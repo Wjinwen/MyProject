@@ -1,6 +1,6 @@
-#Login.regist{
+/* #Login.regist{
     height: 702px;
-}
+} */
 select:not(:-internal-list-box) {
     overflow: visible !important;
 }
@@ -47,8 +47,6 @@ option {
 }
 #captchaImg{
     display: inline-block;
-    width: 66px;
-    height: 30px;
 
 }
 

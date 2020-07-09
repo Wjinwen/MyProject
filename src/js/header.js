@@ -6,6 +6,8 @@
     country,
     countryList,
     countryBool = false;
+    bool=true;
+    timer=0;
   init();
   function init() {
     goTop = document.querySelector("#go-top");
@@ -35,9 +37,18 @@
   }
 
   function goTopHandler(e) {
-    document.documentElement.scrollTop = 0;
+    if(!bool) return;
+    bool=false;
+    timer=setInterval(goTopmove,16);
   }
-
+  function goTopmove(){
+    document.documentElement.scrollTop-=25;
+    if(document.documentElement.scrollTop<=0){
+      document.documentElement.scrollTop=0;
+      bool=true;
+      clearInterval(timer);
+    }
+  }
   function countryHandler() {
     $(".topbar_link_country_arrow").toggleClass("arrow_up");
     countryBool = !countryBool;

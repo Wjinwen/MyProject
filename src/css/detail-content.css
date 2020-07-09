@@ -174,12 +174,13 @@ img {
 #Main .detail-size .number-box .text {
     border-width: 0;
     background: none;
-    width: 28px;
+    width: 22px;
     height: 21px;
     line-height: 21px;
     text-align: center;
     display: inline;
     float: left;
+    outline: none ;
 }
 #Main .detail-size .number-box span {
     display: inline;
@@ -345,9 +346,10 @@ img {
     background-color:rgba(0,0,0,0.3);
     top: 0;
     left: 375px;
+    background-repeat: no-repeat;
     background-image: url(./../img/shoppinglist1-1.jpg);
-    background-size: 488px;
-    /* display: none; */
+    background-size: 200%;
+    display: none;
 }
 .mirro{
     width:122px;
@@ -356,6 +358,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
 }
 
 
