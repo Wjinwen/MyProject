@@ -348,6 +348,7 @@ img {
 .item-item{
     height: 120px;
     position: relative;
+    margin-bottom: 10px;
 }
 
 
@@ -393,6 +394,7 @@ img {
 .cart-tbody .item-item .p-quantity .itxt {
     position: absolute;
     left: 17px;
+    outline: none;
     top: 0;
     border: 1px solid #cacbcb;
     width: 42px;
@@ -437,4 +439,13 @@ img {
     height: 0;
     clear: both;
     visibility: hidden;
+}
+.cart-null{
+    text-align: center;
+    font-size: 45px;
+    color: #f786af;
+    opacity: 0.5;
+    height: 300px;
+    line-height: 300px;
+    display: none;
 }

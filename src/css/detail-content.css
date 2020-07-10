@@ -169,6 +169,7 @@ img {
     float: left;
     width: 21px;
     height: 21px;
+    font-size: 0;
     cursor: pointer;
 }
 #Main .detail-size .number-box .text {
@@ -321,12 +322,24 @@ img {
 
 
 .slide-node{
-    /* float: left; */
+    float: left;
     display: inline-block;
     border: solid 3px #fff;
     margin:0 4px;
     position: relative;
     box-sizing:border-box;
+}
+.slide_inner{
+    position: absolute;
+    left: 0;
+}
+.clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
 }
 .select-border{
     border: 3px solid #f86ea2;

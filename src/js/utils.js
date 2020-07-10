@@ -1,30 +1,28 @@
-var Utils=(function(){
+var utils=(function(){
     return {
-        imgMove:function(dir,speed,elem,left,wid){
-            if(dir=="left"){
-                left-=speed;
-                if(left<=-wid){
-                    left=0;
-                }
-                elem.style.left=left+"px";
-              
-            }else if(dir=="right"){
-                left+=speed;
-                if(left>=0){
-                    bool=false;
-                    left=0;
-                }
-                elem.style.left=left+"px";
-            }
-        }
+        // btnRightClickHandler:()=>{
+        //     var $ul=$(this).siblings(".slide_wrapper").children(".slide_inner");
+        //     var cou=($ul.attr("count")-0)-1;
+        //     var step=$ul.attr("wid")-0;
+        //     var minCount=Math.floor($ul.width()/step);
+        //     if(cou<-minCount) {cou=-minCount;}
+        //     $ul.attr("count",cou);     
+        //     $ul.animate({
+        //         left:cou==-minCount?($ul.attr("last")-$ul.width()):cou*step,
+        //     },500);  
+            
+        // },
+        // btnLeftClickHandler:()=>{
+        //     var $ul=$(this).siblings(".slide_wrapper").children(".slide_inner");
+        //     var cou=($ul.attr("count")-0)+1;
+        //     if(cou>0) cou=0;
+        //     $ul.attr("count",cou); 
+        //     $ul.animate({
+        //         left:cou==0?0:(parseInt($ul.css("left"))+($ul.attr("wid")-0)),
+        //     },500)
+        // },
 
 
 
     }
-
-
-
-
-    
 })()
-

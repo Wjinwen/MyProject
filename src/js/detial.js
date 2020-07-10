@@ -1,22 +1,28 @@
 $(function(){
-        var max,min,mask,imgCon,preImg;
+        var max,min,mask,imgSrc;
         var x=0,
-            y=0,
-            iconList=["./img/a_icon.jpg","./img/b_icon.jpg","./img/c_icon.jpg","./img/d_icon.jpg","./img/e_icon.jpg","./img/f_icon.jpg","./img/g_icon.jpg","./img/h_icon.jpg","./img/i_icon.jpg","./img/j_icon.jpg"],
-            bnList=[];
-            const MASK_WIDTH=122;
-            const MASK_HEIGHT=135;
-            const MIN_WIDTH=244;
-            const MIN_HEIGHT=270;
-            const MAX_WIDTH=244;
-            const MAX_HEIGHT=244;
+            y=0;
+        const MASK_WIDTH=122;
+        const MASK_HEIGHT=135;
+        const MIN_WIDTH=244;
+        const MIN_HEIGHT=270;
+        const MAX_WIDTH=244;
+        const MAX_HEIGHT=244;
             init();
             function init(){
                 max=document.querySelector(".detail-bigpic");
                 min=document.querySelector("#big_pic");
                 mask=document.querySelector(".mirro");
-                console.log(min)
+                // console.log(min)
                 min.addEventListener("mouseenter",mouseHandler);
+                console.log($(".slide-node"))
+                $(".slide-node").on("click",function(){
+                    $(this).addClass("select-border").siblings().removeClass("select-border");
+                    imgSrc=$(this).find("img").attr("src");
+                    console.log(imgSrc)
+                    $(".detail-bigpic").css("background-image",`url(${imgSrc})`);
+                    $("#big_pic").children("img").attr("src",imgSrc);
+                })
             }
     
     

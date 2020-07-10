@@ -25,31 +25,34 @@
                   <a href="javascript:void(0)" class="prevbtn"></a>
                   <a href="javascript:void(0)" class="nextbtn"></a>
                   <ul id="detail-slide" style="list-style: none; padding: 0px; position: absolute;left: 18px; overflow: hidden; width: 340px; height: 75px;">
-                    <li class="slide-node select-border">
-                        <div class="item">
-                          <img src="./img/shoppinglist1-1.jpg" width="68" height="68">
-                        </div>
-                    </li>
-                    <li class="slide-node">
-                        <div class="item">
-                          <img src="./img/shoppinglist1-2.jpg" width="68" height="68">
-                        </div>
-                    </li>
-                    <li class="slide-node">
-                        <div class="item">
-                          <img src="./img/shoppinglist1-3.jpg" width="68" height="68">
-                        </div>
-                    </li>
-                    <li class="slide-node">
-                        <div class="item">
-                          <img src="./img/shoppinglist1-4.jpg" width="68" height="68">
-                        </div>
-                    </li>
-                    <li class="slide-node">
-                        <div class="item">
-                          <img src="./img/shoppinglist1-3.jpg" width="68" height="68">
-                        </div>
-                    </li>
+                     <div class="slide_inner">
+                        <li class="slide-node select-border">
+                            <div class="item">
+                              <img src="./img/shoppinglist1-1.jpg" width="68" height="68">
+                            </div>
+                        </li>
+                        <li class="slide-node">
+                            <div class="item">
+                              <img src="./img/shoppinglist1-2.jpg" width="68" height="68">
+                            </div>
+                        </li>
+                        <li class="slide-node">
+                            <div class="item">
+                              <img src="./img/shoppinglist1-3.jpg" width="68" height="68">
+                            </div>
+                        </li>
+                        <li class="slide-node">
+                            <div class="item">
+                              <img src="./img/shoppinglist1-4.jpg" width="68" height="68">
+                            </div>
+                        </li>
+                        <li class="slide-node">
+                            <div class="item">
+                              <img src="./img/shoppinglist1-3.jpg" width="68" height="68">
+                            </div>
+                        </li>
+                        <div class="clr"></div>
+                     </div>
                   </ul>
                  
                 </div>
@@ -91,9 +94,9 @@
                     <dl class="number-box">
                         <dt>购买（数量）：</dt>
                         <dd>    
-                            <span id="decrease_num"></span>
-                            <input id="quantity" type="text" class="text" value="1" maxlength="2">
-                            <span id="increase_num"></span>
+                            <span class="decrease_num">-</span>
+                            <input type="text" class="text quantity" value="1" maxlength="2">
+                            <span class="increase_num">+</span>
                         </dd>
                     </dl>
                     <div style="margin:15px 0 0 98px;">
@@ -213,3 +216,36 @@
 </div>
 
 <script src="./js/detial.js"></script>
+<script src="./js/stepNumber.js"></script>
+<script>
+    $(function(){
+        $(".slide_inner").width($(".slide_inner").children("li").length*84)
+        .attr("count",0).attr("wid",340).attr("last",340);
+        // console.log($(".slide_inner"),$(".slide_inner").children().length);
+        $(".prevbtn").on("click",btnLeftClickHandler);
+        $(".nextbtn").on("click",btnRightClickHandler);
+
+
+        function btnRightClickHandler(){
+            var $ul=$(this).siblings("#detail-slide").children(".slide_inner");
+            var cou=($ul.attr("count")-0)-1;
+            var step=$ul.attr("wid")-0;
+            var minCount=Math.floor($ul.width()/step);
+            if(cou<-minCount) {cou=-minCount;}
+            $ul.attr("count",cou);     
+            $ul.animate({
+                left:cou==-minCount?($ul.attr("last")-$ul.width()):cou*step,
+            },500);  
+            
+        }
+        function btnLeftClickHandler(){
+            var $ul=$(this).siblings("#detail-slide").children(".slide_inner");
+            var cou=($ul.attr("count")-0)+1;
+            if(cou>0) cou=0;
+            $ul.attr("count",cou); 
+            $ul.animate({
+                left:cou==0?0:(parseInt($ul.css("left"))+($ul.attr("wid")-0)),
+            },500)
+        }
+    })
+</script>
