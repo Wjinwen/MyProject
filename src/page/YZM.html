@@ -3,6 +3,7 @@
         cursor:pointer;
     }
 </style>
+    <input id="yzm" type="text" name="yzm" style="display: none;">
     <canvas id="canvas" width="93px" height="31px"></canvas>
 <script>
         //生成随机数
@@ -20,6 +21,7 @@
     document.getElementById("canvas").onclick = function(e){
         e.preventDefault();
         drawPic();
+        
     };
     function drawPic(){
         //获取到元素canvas
@@ -40,7 +42,7 @@
             var txt = _str[randomNum(0,_str.length)];
             _picTxt += txt;//获取一个随机数
             ctx.fillStyle = randomColor(10,100);//填充随机颜色
-            ctx.font = randomNum(15,25)+"px SimHei";//设置随机数大小，字体为SimHei
+            ctx.font = randomNum(20,30)+"px SimHei";//设置随机数大小，字体为SimHei
             ctx.translate(x,y);//将当前xy坐标作为原始坐标
             ctx.rotate(deg*Math.PI/180);//旋转随机角度
             ctx.fillText(txt, 0,0);//绘制填色的文本
@@ -64,7 +66,10 @@
             ctx.fill();
         }
         // alert(_picTxt);
+        $canvas.previousElementSibling.setAttribute("value",_picTxt);
+        console.log(_picTxt)
         return _picTxt;//返回随机数字符串
     }
     drawPic();
+
 </script>

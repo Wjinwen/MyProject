@@ -1,6 +1,6 @@
-/* #Login.regist{
-    height: 702px;
-} */
+#Login.regist,#Login .right{
+    height: 650px;
+}
 select:not(:-internal-list-box) {
     overflow: visible !important;
 }

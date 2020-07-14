@@ -149,7 +149,7 @@
     float: left;
     margin-right: 5px;
 }
-.cart-checkbox .jdcheckbox {
+.cart-checkbox .allcheckbox {
     position: relative;
     float: none;
     vertical-align: middle;
@@ -300,7 +300,7 @@
     float: left;
     margin:0 5px 0 8px;
 }
-.cart-main .jdcheckbox, .cart-main .jdradio {
+.cart-main .allcheckbox, .cart-main .jdradio {
     float: none;
     position: relative;
     z-index: 5;

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页</title>
     <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/validation/jquery.validate.min.js"></script>
+    <script src="./js/layer/layer.js"></script>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -12,16 +14,61 @@
 <body>
     <div id="topHeader"></div>
     <header></header>
-    <div id="login-main"></div>
+    <div id="login-main">
+        <div id="Main" class="margin">
+            <div id="Login">
+                <div class="left">
+                    <img src="./img/login.jpg" alt="">
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <a href="./register.html" class="alter_list">注册<em>Registration</em></a>
+                        <a href="./login.html" class="choose">登入<em>Login</em></a>
+                    </div>
+                    <div class="content">
+                        <form name="loginForm" class="form">
+                            <div class="item">
+                                <div class="box_left">
+                                    <label>账户：</label>
+                                </div>
+                                <div class="box_right">
+                                    <span class="input_txt txt-269">
+                                        <input type="text" name="uname" maxlength="80" size="20" value="" class="">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="box_left">
+                                    <label>密码：</label>
+                                </div>
+                                <div class="box_right">
+                                    <span class="input_txt txt-269">
+                                        <input type="password" name="upwd" maxlength="80" size="20" value="" class="">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="box_right">
+                                    <input type="submit" class="login_btn" style="font-size: 0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="#" style="line-height:30px">忘记密码</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
     <footer></footer>
 
     <script>
         $(function(){
             $("#topHeader").load("./page/topHeader.html");
-            $("#login-main").load("./page/login-main.html");
             $("header").load("./page/header.html");
             $("footer").load("./page/footer.html");
         })
     </script>
+    <script src="./js/login.js"></script>
 </body>
 </html>
