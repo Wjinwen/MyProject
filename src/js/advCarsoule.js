@@ -1,4 +1,5 @@
 (function(){
+    
     var index=0,timer=300,autoBool=true;
     init();
     function init(){
@@ -14,12 +15,10 @@
 
     }
 
-
     function autoPlay(){
         if(autoBool) setInterval(showNext,16); 
     }
 
-    
     function showNext(next){
         timer--;
         if(timer!=0) return;

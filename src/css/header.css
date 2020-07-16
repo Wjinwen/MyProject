@@ -126,7 +126,12 @@ label, input, select, textarea {
     border-bottom-color: #000!important;
     margin-bottom: 2px!important;
 }
-
+.loginedUser{
+    display:none;
+}
+.unlogin{
+    display: inline-block;
+}
 .country_selector_dropdown, .topbar_region_dropdown {
     overflow: hidden;
     border: 1px solid #ddd;
@@ -286,7 +291,10 @@ label, input, select, textarea {
 #cart-box .rank-list {
     height: 271px;
     overflow: auto;
-    /* display: none; */
+    
+}
+#cart-box .content_catalog{
+    display: none;
 }
 
 /* 添加到购物车里的 东西的样式 */

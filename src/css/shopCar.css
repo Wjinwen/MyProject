@@ -19,6 +19,7 @@
 .carContent{
     width: 1000px;
     margin: 0 auto;
+    display: none;
 }
 .cart-filter-bar {
     margin-top: 10px;
@@ -112,6 +113,10 @@
     width: 140px;
     height: 32px;
     padding: 0 10px 0 20px;
+}
+.p-img img{
+    width: 80px;
+    height: 80px;
 }
  .cart-thead .t-price {
     width: 120px;
@@ -447,5 +452,5 @@ img {
     opacity: 0.5;
     height: 300px;
     line-height: 300px;
-    display: none;
+    display: block;
 }

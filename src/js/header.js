@@ -66,4 +66,19 @@
     $(country).children("span").eq(1).text(txt);
     countryHandler();
   }
+  if(localStorage.users){
+    var obj=JSON.parse(localStorage.users);
+    var user=obj["uname"];
+    var quitA=$("<a href='#' class='divider'></a><a href='javascript:;'>退出</a>")
+    $(".unlogin").css("display",'none').next(".loginedUser").css("display","inline-block").html("Hi~ "+user).append(quitA);
+    quitA.eq(1).on("click",function(){
+      localStorage.removeItem("users");
+      localStorage.removeItem("token");
+      layer.msg("退出成功,即将跳转到登录页面");
+      setTimeout(function(){
+        javascrtpt:window.location.href='http://localhost:8585/login.html'
+     },1000)
+    })
+  }
+
 })();

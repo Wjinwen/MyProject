@@ -2,29 +2,57 @@ $(function(){
         var max,min,mask,imgSrc;
         var x=0,
             y=0;
-        const MASK_WIDTH=122;
+        const MASK_WIDTH=122;  
         const MASK_HEIGHT=135;
         const MIN_WIDTH=244;
         const MIN_HEIGHT=270;
         const MAX_WIDTH=244;
         const MAX_HEIGHT=244;
-            init();
-            function init(){
-                max=document.querySelector(".detail-bigpic");
-                min=document.querySelector("#big_pic");
-                mask=document.querySelector(".mirro");
-                // console.log(min)
-                min.addEventListener("mouseenter",mouseHandler);
-                console.log($(".slide-node"))
-                $(".slide-node").on("click",function(){
-                    $(this).addClass("select-border").siblings().removeClass("select-border");
-                    imgSrc=$(this).find("img").attr("src");
-                    console.log(imgSrc)
-                    $(".detail-bigpic").css("background-image",`url(${imgSrc})`);
-                    $("#big_pic").children("img").attr("src",imgSrc);
-                })
+        init();
+        function init(){
+            max=document.querySelector(".detail-bigpic");
+            min=document.querySelector("#big_pic");
+            mask=document.querySelector(".mirro");
+            // console.log(min)
+            min.addEventListener("mouseenter",mouseHandler);
+            $(".slide_inner").width($(".slide_inner").children("li").length*84)
+            .attr("count",0).attr("wid",340).attr("last",340);
+            // console.log($(".slide_inner"),$(".slide_inner").children().length);
+            $(".prevbtn").on("click",btnLeftClickHandler);
+            $(".nextbtn").on("click",btnRightClickHandler);
+            // console.log($(".slide-node"))
+            $(".slide-node").on("click",function(){
+                $(this).addClass("select-border").siblings().removeClass("select-border");
+                imgSrc=$(this).find("img").attr("src");
+                console.log(imgSrc)
+                $(".detail-bigpic").css("background-image",`url(${imgSrc})`);
+                $("#big_pic").children("img").attr("src",imgSrc);
+            })
+        }
+
+
+            function btnRightClickHandler(){
+                var $ul=$(this).siblings("#detail-slide").children(".slide_inner");
+                var cou=($ul.attr("count")-0)-1;
+                var step=$ul.attr("wid")-0;
+                var minCount=Math.floor($ul.width()/step);
+                if(cou<-minCount) {cou=-minCount;}
+                $ul.attr("count",cou);     
+                $ul.animate({
+                    left:cou==-minCount?($ul.attr("last")-$ul.width()):cou*step,
+                },500);  
+                
             }
-    
+            function btnLeftClickHandler(){
+                var $ul=$(this).siblings("#detail-slide").children(".slide_inner");
+                var cou=($ul.attr("count")-0)+1;
+                if(cou>0) cou=0;
+                $ul.attr("count",cou); 
+                $ul.animate({
+                    left:cou==0?0:(parseInt($ul.css("left"))+($ul.attr("wid")-0)),
+                },500)
+            }
+
     
     
             function mouseHandler(e){
@@ -57,97 +85,3 @@ $(function(){
                     max.style.backgroundPositionY=-y*(MAX_WIDTH/MASK_WIDTH)+"px";
             }
 })
-       
-
-       
-
-        // function createCarousel(parent){
-        //     var div=Utils.ce("div",{
-        //         position:"absolute",
-        //         width:MIN_WIDTH+2+"px",
-        //         height:"58px",
-        //         top:MIN_WIDTH+2+"px"
-        //     })
-        //     var left=Utils.ce("div",{
-        //         width:"22px",
-        //         height:"32px",
-        //         top:"13px",
-        //         backgroundImage:"url(./img/sprite.png)",
-        //         backgroundPositionX:"0px",
-        //         backgroundPositionY:"-54px",
-        //         position:"absolute",
-        //     });
-        //     var right=left.cloneNode(false);
-        //     left.style.left="0px";//先复制以后再加
-        //     Object.assign(right.style,{
-        //         right:"0px",
-        //         backgroundPositionX:"-78px",
-        //         backgroundPositionY:"0px",
-        //     })
-        //     bnList.push(left);
-        //     bnList.push(right);
-        //     div.appendChild(left);
-        //     div.appendChild(right);
-
-        //     var con=Utils.ce("div",{
-        //         position:"absolute",
-        //         width:"380px",
-        //         height:"58px",
-        //         left:"36px",
-        //         overflow:"hidden",
-       
-        //     })
-        //     div.appendChild(con);
-        //     createImageCon(con);
-        //     parent.appendChild(div);
-        //     div.addEventListener("click",clickHandler);
-        // }
-
-        // function createImageCon(parent){
-        //     var width=iconList.length*IMAGE_WIDTH+(iconList.length-1)*IMAGE_MARGIN*2;
-        //     imgCon=Utils.ce("div",{
-        //         position:"absolute",
-        //         width:width+"px",
-        //         height:"58px",
-        //         left:0,
-        //         transition: "all 0.5s"
-        //     });
-        //     for(var i=0;i<iconList.length;i++){
-        //         var img=Utils.ce("img",{
-        //             width:IMAGE_WIDTH-4+"px",
-        //             height:IMAGE_WIDTH-4+"px",
-        //             border:`2px solid rgba(255,0,0,${i==0 ? 1 : 0})`,
-        //             marginLeft:`${i===0 ? '0px' : IMAGE_MARGIN+"px"}`,
-        //             marginRight: IMAGE_MARGIN+"px"
-        //         });
-        //         img.src=iconList[i];
-        //         if(i===0) preImg=img;
-        //         imgCon.appendChild(img);
-        //     }
-        //     imgCon.addEventListener("mouseover",iconMouseHandler);
-        //     parent.appendChild(imgCon);
-        // }
-
-        // function iconMouseHandler(e){
-        //     if(e.target.nodeName!=="IMG") return;
-        //     if(preImg){
-        //         preImg.style.border="2px solid rgba(255,0,0,0)";
-        //     }
-        //     preImg=e.target;
-        //     preImg.style.border="2px solid rgba(255,0,0,1)"
-        // //    console.log( e.target.src.replace(/_icon/,""));
-        //     min.style.backgroundImage=max.style.backgroundImage=`url(${e.target.src.replace(/_icon/,"")})`;
-        // }
-
-        
-
-
-        // function clickHandler(e){
-        //     var index=bnList.indexOf(e.target)
-        //     if(index<0) return
-        //     if(index===0){
-        //        imgCon.style.left="0px";
-        //     }else{
-        //         imgCon.style.left="-295px";
-        //     }
-        // }

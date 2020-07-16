@@ -1,0 +1,296 @@
+[
+    {
+        "gid":100002,
+        "gtitle":"水活力水润蓝丸面膜 (25g)",
+        "gbrand":"蒂佳婷",
+        "gposition":["面部护肤","面膜","面膜贴"],
+        "gnowpirce":98,
+        "goldpirce":230,
+        "gdiscount":4.3,
+        "gspecification":"25g",
+        "geffect":["保湿"],
+        "giconimgsrc":["./img/shoppinglist2-1.jpg","./img/shoppinglist2-2.jpg","./img/shoppinglist2-3.jpg","./img/shoppinglist2-4.jpg","./img/shoppinglist2-5.jpg"]
+    },
+    
+
+    {
+        "gid":100003,
+        "gtitle":"升级版金致胶囊精华液(金胶) (90capsule(s))",
+        "gbrand":"伊丽莎白 · 雅顿",
+        "gposition":["面部护肤","精华","精华素/疗程"],
+        "gnowpirce":428,
+        "goldpirce":840,
+        "gdiscount":5.1,
+        "gspecification":"90capsule(s)",
+        "geffect":["保湿","滋润","提亮肤色","舒缓/抗敏感","提拉紧致","所有肤质"],
+        "giconimgsrc":["./img/shoppinglist3-1.jpg","./img/shoppinglist3-2.jpg","./img/shoppinglist3-3.jpg","./img/shoppinglist3-4.jpg","./img/shoppinglist3-5.jpg"]
+    },
+
+
+    {
+        "gid":100004,
+        "gtitle":"夜间修护睡眠面膜 (70ml)",
+        "gbrand":"兰芝",
+        "gposition":["护肤","面膜","保湿"],
+        "gnowpirce":72,
+        "goldpirce":205,
+        "gdiscount":3.5,
+        "gspecification":"70ml",
+        "geffect":["保湿"],
+        "giconimgsrc":["./img/shoppinglist4-1.jpg","./img/shoppinglist4-2.jpg","./img/shoppinglist4-3.jpg","./img/shoppinglist4-4.jpg","./img/shoppinglist4-5.jpg","./img/shoppinglist4-6.jpg"]
+    },
+
+
+    {
+        "gid":100001,
+        "gtitle":"灵芝焕能精华水 菌菇水 (200ml)",
+        "gbrand":"悦木之源",
+        "gposition":["面部护肤","精华","精华液"],
+        "gnowpirce":149,
+        "goldpirce":320,
+        "gdiscount":4.7,
+        "gspecification":"200ml",
+        "geffect":["抗敏感","去红血丝","中性","油性"],
+        "giconimgsrc":["./img/shoppinglist1-1.jpg","./img/shoppinglist1-2.jpg","./img/shoppinglist1-3.jpg","./img/shoppinglist1-4.jpg","./img/shoppinglist1-5.jpg","./img/shoppinglist1-6.jpg","./img/shoppinglist1-7.jpg"]
+    },
+
+
+    {
+        "gid":100005,
+        "gtitle":"MOISTURIZER高保湿霜 (125ml)",
+        "gbrand":"科颜氏",
+        "gposition":["面部护肤","面霜","晚霜"],
+        "gnowpirce":318,
+        "goldpirce":530,
+        "gdiscount":6,
+        "gspecification":"125ml",
+        "geffect":["滋润","保湿"],
+        "giconimgsrc":["./img/shoppinglist5-1.jpg","./img/shoppinglist5-2.jpg","./img/shoppinglist5-3.jpg","./img/shoppinglist5-4.jpg","./img/shoppinglist5-5.jpg"]
+    },
+
+
+    {
+        "gid":100006,
+        "gtitle":"ADVANCED NIGHT REPAIR特润修护肌底精华露(第六代小棕瓶) (100ml)",
+        "gbrand":"雅诗兰黛",
+        "gposition":["面部护肤","精华","精华液"],
+        "gnowpirce":890,
+        "goldpirce":1330,
+        "gdiscount":6.7,
+        "gspecification":"100ml",
+        "geffect":["滋润","提亮肤色","提拉紧致","抗皱/祛皱"],
+        "giconimgsrc":["./img/shoppinglist6-1.jpg","./img/shoppinglist6-2.jpg","./img/shoppinglist6-3.jpg","./img/shoppinglist6-4.jpg","./img/shoppinglist6-5.jpg","./img/shoppinglist6-6.jpg"]
+    },
+
+
+    {
+        "gid":100007,
+        "gtitle":"升级版嫩肌活肤精华 (100ml)",
+        "gbrand":"兰蔻",
+        "gposition":["面部护肤","精华","精华素/疗程"],
+        "gnowpirce":933,
+        "goldpirce":1855,
+        "gdiscount":5,
+        "gspecification":"100ml",
+        "geffect":["提亮肤色","提拉紧致"],
+        "giconimgsrc":["./img/shoppinglist7-1.jpg","./img/shoppinglist7-2.jpg","./img/shoppinglist7-3.jpg","./img/shoppinglist7-4.jpg"]
+    },
+
+
+    {
+        "gid":100008,
+        "gtitle":"流金岁月凝润美肤水 流金水 (200ml)",
+        "gbrand":"茵芙莎",
+        "gposition":["面部护肤","化妆水","柔肤水"],
+        "gnowpirce":240,
+        "goldpirce":320,
+        "gdiscount":7.5,
+        "gspecification":"200ml",
+        "geffect":["保湿","滋润","控油","提亮肤色","所有肤质"],
+        "giconimgsrc":["./img/shoppinglist8-1.jpg","./img/shoppinglist8-2.jpg","./img/shoppinglist8-3.jpg","./img/shoppinglist8-4.jpg","./img/shoppinglist8-5.jpg","./img/shoppinglist8-6.jpg","./img/shoppinglist8-7.jpg"]
+    },
+
+
+    {
+        "gid":100009,
+        "gtitle":"ULTIMUNE 红妍肌底精华露 （红腰子） (75ml)",
+        "gbrand":"资生堂",
+        "gposition":["面部护肤","精华","精华素/疗程"],
+        "gnowpirce":630,
+        "goldpirce":1050,
+        "gdiscount":6,
+        "gspecification":"75ml",
+        "geffect":["保湿","滋润","提亮肤色","提拉紧致","抗皱/祛皱","所有肤质"],
+        "giconimgsrc":["./img/shoppinglist9-1.jpg","./img/shoppinglist9-2.jpg","./img/shoppinglist9-3.jpg","./img/shoppinglist9-4.jpg","./img/shoppinglist9-5.jpg","./img/shoppinglist9-6.jpg"]
+    },
+    
+
+    {
+        "gid":100002,
+        "gtitle":"水活力水润蓝丸面膜 (25g)",
+        "gbrand":"蒂佳婷",
+        "gposition":["面部护肤","面膜","面膜贴"],
+        "gnowpirce":98,
+        "goldpirce":230,
+        "gdiscount":4.3,
+        "gspecification":"25g",
+        "geffect":["保湿"],
+        "giconimgsrc":["./img/shoppinglist2-1.jpg","./img/shoppinglist2-2.jpg","./img/shoppinglist2-3.jpg","./img/shoppinglist2-4.jpg","./img/shoppinglist2-5.jpg"]
+    },
+    
+
+    {
+        "gid":100003,
+        "gtitle":"升级版金致胶囊精华液(金胶) (90capsule(s))",
+        "gbrand":"伊丽莎白 · 雅顿",
+        "gposition":["面部护肤","精华","精华素/疗程"],
+        "gnowpirce":428,
+        "goldpirce":840,
+        "gdiscount":5.1,
+        "gspecification":"90capsule(s)",
+        "geffect":["保湿","滋润","提亮肤色","舒缓/抗敏感","提拉紧致","所有肤质"],
+        "giconimgsrc":["./img/shoppinglist3-1.jpg","./img/shoppinglist3-2.jpg","./img/shoppinglist3-3.jpg","./img/shoppinglist3-4.jpg","./img/shoppinglist3-5.jpg"]
+    },
+
+
+    {
+        "gid":100004,
+        "gtitle":"夜间修护睡眠面膜 (70ml)",
+        "gbrand":"兰芝",
+        "gposition":["护肤","面膜","保湿"],
+        "gnowpirce":72,
+        "goldpirce":205,
+        "gdiscount":3.5,
+        "gspecification":"70ml",
+        "geffect":["保湿"],
+        "giconimgsrc":["./img/shoppinglist4-1.jpg","./img/shoppinglist4-2.jpg","./img/shoppinglist4-3.jpg","./img/shoppinglist4-4.jpg","./img/shoppinglist4-5.jpg","./img/shoppinglist4-6.jpg"]
+    },
+
+
+    {
+        "gid":100006,
+        "gtitle":"ADVANCED NIGHT REPAIR特润修护肌底精华露(第六代小棕瓶) (100ml)",
+        "gbrand":"雅诗兰黛",
+        "gposition":["面部护肤","精华","精华液"],
+        "gnowpirce":890,
+        "goldpirce":1330,
+        "gdiscount":6.7,
+        "gspecification":"100ml",
+        "geffect":["滋润","提亮肤色","提拉紧致","抗皱/祛皱"],
+        "giconimgsrc":["./img/shoppinglist6-1.jpg","./img/shoppinglist6-2.jpg","./img/shoppinglist6-3.jpg","./img/shoppinglist6-4.jpg","./img/shoppinglist6-5.jpg","./img/shoppinglist6-6.jpg"]
+    },
+
+
+    {
+        "gid":100005,
+        "gtitle":"MOISTURIZER高保湿霜 (125ml)",
+        "gbrand":"科颜氏",
+        "gposition":["面部护肤","面霜","晚霜"],
+        "gnowpirce":318,
+        "goldpirce":530,
+        "gdiscount":6,
+        "gspecification":"125ml",
+        "geffect":["滋润","保湿"],
+        "giconimgsrc":["./img/shoppinglist5-1.jpg","./img/shoppinglist5-2.jpg","./img/shoppinglist5-3.jpg","./img/shoppinglist5-4.jpg","./img/shoppinglist5-5.jpg"]
+    },
+
+
+    {
+        "gid":100006,
+        "gtitle":"ADVANCED NIGHT REPAIR特润修护肌底精华露(第六代小棕瓶) (100ml)",
+        "gbrand":"雅诗兰黛",
+        "gposition":["面部护肤","精华","精华液"],
+        "gnowpirce":890,
+        "goldpirce":1330,
+        "gdiscount":6.7,
+        "gspecification":"100ml",
+        "geffect":["滋润","提亮肤色","提拉紧致","抗皱/祛皱"],
+        "giconimgsrc":["./img/shoppinglist6-1.jpg","./img/shoppinglist6-2.jpg","./img/shoppinglist6-3.jpg","./img/shoppinglist6-4.jpg","./img/shoppinglist6-5.jpg","./img/shoppinglist6-6.jpg"]
+    },
+
+
+    {
+        "gid":100007,
+        "gtitle":"升级版嫩肌活肤精华 (100ml)",
+        "gbrand":"兰蔻",
+        "gposition":["面部护肤","精华","精华素/疗程"],
+        "gnowpirce":933,
+        "goldpirce":1855,
+        "gdiscount":5,
+        "gspecification":"100ml",
+        "geffect":["提亮肤色","提拉紧致"],
+        "giconimgsrc":["./img/shoppinglist7-1.jpg","./img/shoppinglist7-2.jpg","./img/shoppinglist7-3.jpg","./img/shoppinglist7-4.jpg"]
+    },
+
+
+    {
+        "gid":100008,
+        "gtitle":"流金岁月凝润美肤水 流金水 (200ml)",
+        "gbrand":"茵芙莎",
+        "gposition":["面部护肤","化妆水","柔肤水"],
+        "gnowpirce":240,
+        "goldpirce":320,
+        "gdiscount":7.5,
+        "gspecification":"200ml",
+        "geffect":["保湿","滋润","控油","提亮肤色","所有肤质"],
+        "giconimgsrc":["./img/shoppinglist8-1.jpg","./img/shoppinglist8-2.jpg","./img/shoppinglist8-3.jpg","./img/shoppinglist8-4.jpg","./img/shoppinglist8-5.jpg","./img/shoppinglist8-6.jpg","./img/shoppinglist8-7.jpg"]
+    },
+
+
+    {
+        "gid":100009,
+        "gtitle":"ULTIMUNE 红妍肌底精华露 （红腰子） (75ml)",
+        "gbrand":"资生堂",
+        "gposition":["面部护肤","精华","精华素/疗程"],
+        "gnowpirce":630,
+        "goldpirce":1050,
+        "gdiscount":6,
+        "gspecification":"75ml",
+        "geffect":["保湿","滋润","提亮肤色","提拉紧致","抗皱/祛皱","所有肤质"],
+        "giconimgsrc":["./img/shoppinglist9-1.jpg","./img/shoppinglist9-2.jpg","./img/shoppinglist9-3.jpg","./img/shoppinglist9-4.jpg","./img/shoppinglist9-5.jpg","./img/shoppinglist9-6.jpg"]
+    },
+
+    {
+        "gid":100006,
+        "gtitle":"ADVANCED NIGHT REPAIR特润修护肌底精华露(第六代小棕瓶) (100ml)",
+        "gbrand":"雅诗兰黛",
+        "gposition":["面部护肤","精华","精华液"],
+        "gnowpirce":890,
+        "goldpirce":1330,
+        "gdiscount":6.7,
+        "gspecification":"100ml",
+        "geffect":["滋润","提亮肤色","提拉紧致","抗皱/祛皱"],
+        "giconimgsrc":["./img/shoppinglist6-1.jpg","./img/shoppinglist6-2.jpg","./img/shoppinglist6-3.jpg","./img/shoppinglist6-4.jpg","./img/shoppinglist6-5.jpg","./img/shoppinglist6-6.jpg"]
+    },
+
+
+    {
+        "gid":100005,
+        "gtitle":"MOISTURIZER高保湿霜 (125ml)",
+        "gbrand":"科颜氏",
+        "gposition":["面部护肤","面霜","晚霜"],
+        "gnowpirce":318,
+        "goldpirce":530,
+        "gdiscount":6,
+        "gspecification":"125ml",
+        "geffect":["滋润","保湿"],
+        "giconimgsrc":["./img/shoppinglist5-1.jpg","./img/shoppinglist5-2.jpg","./img/shoppinglist5-3.jpg","./img/shoppinglist5-4.jpg","./img/shoppinglist5-5.jpg"]
+    },
+
+
+    {
+        "gid":100006,
+        "gtitle":"ADVANCED NIGHT REPAIR特润修护肌底精华露(第六代小棕瓶) (100ml)",
+        "gbrand":"雅诗兰黛",
+        "gposition":["面部护肤","精华","精华液"],
+        "gnowpirce":890,
+        "goldpirce":1330,
+        "gdiscount":6.7,
+        "gspecification":"100ml",
+        "geffect":["滋润","提亮肤色","提拉紧致","抗皱/祛皱"],
+        "giconimgsrc":["./img/shoppinglist6-1.jpg","./img/shoppinglist6-2.jpg","./img/shoppinglist6-3.jpg","./img/shoppinglist6-4.jpg","./img/shoppinglist6-5.jpg","./img/shoppinglist6-6.jpg"]
+    }
+
+    
+
+]

@@ -59,14 +59,11 @@ $(function(){
             capcha:{
                 equalTo: "验证码错误,请重新输入"
             }
-
-
         },
         //提交 等价于 onsubmit
-        submitHandler(form ) {
-
+        submitHandler(form){
             var dataStr = $(form).serialize();
-            // console.log(dataStr);
+            console.log(dataStr);
             if(!$(".must").prop("checked")){
                 layer.msg('请阅读使用条款及隐私政策,同意后勾选');
                 return;

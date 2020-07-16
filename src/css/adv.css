@@ -129,6 +129,18 @@ element.style {
     left: 0;
     top: 10px;
 }
+.item_slide_three_price_old{
+    position: relative;
+    color: #999;
+}
+.item_slide_three_price_old:after {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid #999;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
 .adv_slide_cart, .item_slide_three_cart, .product_item .product_item_cart {
     width: 100px;
     height: 28px;

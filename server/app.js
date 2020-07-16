@@ -4,10 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var cookieSession = require("cookie-session");
 var logger = require('morgan');
+var jwt = require("jsonwebtoken");
 
 //路由模块
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 var apiRouter = require("./routes/api");
 
 
@@ -36,14 +37,43 @@ app.use(function(request, response, next){
     response.setHeader("Access-Control-Allow-Origin", "*");
     next();
 })
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+app.use("*", function (request, resposne, next) {
+  var reg = /^\/api\/.*/i;
+  // if (reg.test(request.originalUrl)) {
+  //访问带有 api的接口 ,login和reg是免 token校验
+  if (request.originalUrl.includes("/api/login") || request.originalUrl.includes("/api/reg")||request.originalUrl.includes("/api/isReg")) {
+    next();
+  } else {
+    //必须token校验
+    //拦截 是否 token
+    //request.headers.token 请求头里是否带有 token
+    var token = request.headers.token || request.body.token || request.query.token;
+    jwt.verify(token, require("./config/index").secret, function (err, code) {
+      if (err) {
+        //校验没通过,提示 重新登录
+        resposne.json({
+          msg: "token失效,请重新登录",
+          status:-200
+        })
+      } else {
+        next();
+      }
+    })
+  }
+  // }
+})
+
 app.use('/api', apiRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function (err, req, res, next) {

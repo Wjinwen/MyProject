@@ -1,18 +1,18 @@
 <div id="Main" class="margin">
     <div class="location">
-        <a href="/src/index.html">首頁</a>&nbsp;<em>&gt;</em>&nbsp;
+        <!-- <a href="/src/index.html">首頁</a>&nbsp;<em>&gt;</em>&nbsp;
         <a href="#">Origins</a>&nbsp;<em>&gt;</em>&nbsp;
         <a href="#">面部护理</a>&nbsp;<em>&gt;</em>&nbsp;
         <a href="#">精华</a>&nbsp;<em>&gt;</em>&nbsp;
         <a href="#">精华液</a>&nbsp;<em>&gt;</em>&nbsp;
-        <b>灵芝焕能精华水 菌菇水 (200ml)</b>
+        <b>灵芝焕能精华水 菌菇水 (200ml)</b> -->
     </div>
     
     <div class="detail-info mt-10">
         <div class="left">
             <div class="top-pic" id="big_pic" align="center" >
-                <img src="/src/img/shoppinglist1-1.jpg" height="270">
-                <div class="mirro"></div>
+                <!-- <img src="/src/img/shoppinglist1-1.jpg">
+                <div class="mirro"></div> -->
             </div>
 
             <div class="mt-10" style="overflow:hidden">
@@ -25,34 +25,44 @@
                   <a href="javascript:void(0)" class="prevbtn"></a>
                   <a href="javascript:void(0)" class="nextbtn"></a>
                   <ul id="detail-slide" style="list-style: none; padding: 0px; position: absolute;left: 18px; overflow: hidden; width: 340px; height: 75px;">
-                     <div class="slide_inner">
+                     <!-- <div class="slide_inner">
                         <li class="slide-node select-border">
                             <div class="item">
-                              <img src="./img/shoppinglist1-1.jpg" width="68" height="68">
+                              <img src="./img/shoppinglist1-1.jpg">
                             </div>
                         </li>
                         <li class="slide-node">
                             <div class="item">
-                              <img src="./img/shoppinglist1-2.jpg" width="68" height="68">
+                              <img src="./img/shoppinglist1-2.jpg">
                             </div>
                         </li>
                         <li class="slide-node">
                             <div class="item">
-                              <img src="./img/shoppinglist1-3.jpg" width="68" height="68">
+                              <img src="./img/shoppinglist1-3.jpg">
                             </div>
                         </li>
                         <li class="slide-node">
                             <div class="item">
-                              <img src="./img/shoppinglist1-4.jpg" width="68" height="68">
+                              <img src="./img/shoppinglist1-4.jpg">
                             </div>
                         </li>
                         <li class="slide-node">
                             <div class="item">
-                              <img src="./img/shoppinglist1-3.jpg" width="68" height="68">
+                              <img src="./img/shoppinglist1-5.jpg">
+                            </div>
+                        </li>
+                        <li class="slide-node">
+                            <div class="item">
+                              <img src="./img/shoppinglist1-6.jpg">
+                            </div>
+                        </li>
+                        <li class="slide-node">
+                            <div class="item">
+                              <img src="./img/shoppinglist1-7.jpg">
                             </div>
                         </li>
                         <div class="clr"></div>
-                     </div>
+                     </div> -->
                   </ul>
                  
                 </div>
@@ -63,14 +73,14 @@
         </div>
         <div class="right">
             <div class="title">
-                <a href="#"><span itemprop="brand">悦木之源</span></a><br>
+                <!-- <a href="#"><span itemprop="brand">悦木之源</span></a><br>
                 <a href="#" target="_blank">
                     <span itemprop="name">灵芝焕能精华水 菌菇水 (200ml)</span>
-                </a>
+                </a> -->
             </div>
 
             <div class="content">
-            	<div>产品号码︰108698402001</div>
+            	<!-- <div>产品号码︰108698402001</div>
                 <div>现   价：<big>HK$153.0</big></div>
             	<div>建议价：HK$ 320.0</div>
             	<div>折   扣：4.8折</div>
@@ -85,7 +95,7 @@
                 </div>
             	<div><p style="float:left">评   分：</p>
                  - （0篇产品评价）
-                </div>
+                </div> -->
             	
             </div>
 
@@ -100,7 +110,7 @@
                         </dd>
                     </dl>
                     <div style="margin:15px 0 0 98px;">
-                        <img src="./img/detail-info-cart.gif" width="150" height="51" style="cursor:pointer" alt="立即购买！">
+                        <img src="./img/detail-info-cart.gif" width="150" height="51" class="add_cart" style="cursor:pointer" alt="立即购买！">
                     </div>
                 </form>
             </div>
@@ -205,47 +215,136 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
 
         <div class="clear"></div>
     </div>
 </div>
-
-<script src="./js/detial.js"></script>
-<script src="./js/stepNumber.js"></script>
+<!-- 动态更改详情页内容  数据驱动显示 -->
 <script>
-    $(function(){
-        $(".slide_inner").width($(".slide_inner").children("li").length*84)
-        .attr("count",0).attr("wid",340).attr("last",340);
-        // console.log($(".slide_inner"),$(".slide_inner").children().length);
-        $(".prevbtn").on("click",btnLeftClickHandler);
-        $(".nextbtn").on("click",btnRightClickHandler);
+        $(function(){
+            function addScript(url){
+                var script = document.createElement('script');
+                script.setAttribute('type','text/JavaScript');
+                script.setAttribute('src',url);
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+            //发送之前的拦截器 
+            axios.interceptors.request.use(function (config) {
+                config.baseUrl = "http://127.0.0.1:8585";
+                //发送之前,读取token
+                config.headers.token = localStorage.getItem("token")
+                return config;
+            });
+
+            axios({
+                url: "/api/index",
+                method: "get",
+            }).then(function (res) {
+                if(res.data.status==-200){
+                    console.log(res);
+                    layer.confirm('您还没有登录,请先登录或注册', {btn: ['登录','注册']}, function(){
+                         layer.msg("即将跳转到登录页面");
+                         setTimeout(function(){
+                            javascrtpt:window.location.href='http://localhost:8585/login.html'
+                        },1000)
+                    }, function(){
+                        layer.msg("即将跳转到注册页面");
+                        setTimeout(function(){
+                            javascrtpt:window.location.href='http://localhost:8585/register.html'
+                        },1000)
+                    });
+                    $("#Main").css("opacity",0);
+                    return;
+                }
+                var arr=[...res.data.data];
+                var searchId=location.search.slice(5);
+                var targetGood=arr.filter((item,index)=>{
+                    if(item.gid==searchId) return index;
+                })
+                targetGood=targetGood[0];
+                // 位置条
+                var loca=`<a href="/src/index.html">首頁</a>&nbsp;<em>&gt;</em>&nbsp;
+                    <a href="#">${targetGood.gbrand}</a>&nbsp;<em>&gt;</em>&nbsp;
+                    <a href="#">${targetGood.gposition[0]}</a>&nbsp;<em>&gt;</em>&nbsp;
+                    <a href="#">${targetGood.gposition[1]}</a>&nbsp;<em>&gt;</em>&nbsp;
+                    <a href="#">${targetGood.gposition[2]}</a>&nbsp;<em>&gt;</em>&nbsp;
+                    <b>${targetGood.gtitle}</b>`;
+                $(".location").html(loca);
+                // 放大镜小图标
+                var slideInner=`<div class="slide_inner">`;
+                for(let i=0;i<targetGood.giconimgsrc.length;i++){
+                    if(i==0){
+                        slideInner+= `<li class="slide-node select-border">`;
+                    }else {
+                        slideInner+= `<li class="slide-node">`;
+                    }
+                    slideInner+= `<div class="item"><img src="${targetGood.giconimgsrc[i]}"></div></li>`;
+                }
+                slideInner+=`</div>`;
+                $("#detail-slide").html(slideInner);
+                // 图片显示区域
+                var showPic=`<img src="${targetGood.giconimgsrc[0]}"><div class="mirro"></div>`
+                $("#big_pic").html(showPic);  
+                // 商品信息
+                var conMsg=`<div>产品号码︰${targetGood.gid}</div>
+                            <div>现   价：<big>HK$${targetGood.gnowpirce}</big></div>
+                            <div>建议价：HK$ ${targetGood.goldpirce}</div>
+                            <div>折   扣：${targetGood.gdiscount}折</div>
+                            <div>规   格：${targetGood.gspecification}  </div>
+                            <div>功   效：<span class="intro-list">`;
+                for(let j=0;j<targetGood.geffect.length;j++){
+                    conMsg+=`<span>${targetGood.geffect[j]}</span>`;
+                }
+                conMsg+=`</span></div><div><p style="float:left">评   分：</p>
+                        - （0篇产品评价）</div>`;
+                $(".detail-info .right .content").html(conMsg);
+                // 商品标题
+                var goodTitle=`<a href="#"><span itemprop="brand">${targetGood.gbrand}</span></a><br>
+                        <a href="#" target="_blank"><span itemprop="name">${targetGood.gtitle}</span></a>`;
+                $(".detail-info .right .title").html(goodTitle);
+                $(".add_cart").data("info",JSON.stringify(targetGood));
+                addScript("./js/detial.js");
+                
+                
+            })
+        })
 
 
-        function btnRightClickHandler(){
-            var $ul=$(this).siblings("#detail-slide").children(".slide_inner");
-            var cou=($ul.attr("count")-0)-1;
-            var step=$ul.attr("wid")-0;
-            var minCount=Math.floor($ul.width()/step);
-            if(cou<-minCount) {cou=-minCount;}
-            $ul.attr("count",cou);     
-            $ul.animate({
-                left:cou==-minCount?($ul.attr("last")-$ul.width()):cou*step,
-            },500);  
-            
-        }
-        function btnLeftClickHandler(){
-            var $ul=$(this).siblings("#detail-slide").children(".slide_inner");
-            var cou=($ul.attr("count")-0)+1;
-            if(cou>0) cou=0;
-            $ul.attr("count",cou); 
-            $ul.animate({
-                left:cou==0?0:(parseInt($ul.css("left"))+($ul.attr("wid")-0)),
-            },500)
-        }
-    })
+        $(function () {
+            $(".add_cart").on("click",function () {
+                var data = JSON.parse($(this).data('info'));
+               
+                delete(data.gdiscount);
+                delete(data.geffect);
+                delete(data.goldpirce);
+                delete(data.gposition);
+                delete(data.gspecification);
+                //添加购买数量
+                data.num = $(".quantity").val();
+                //添加购物人
+                data.uid = JSON.parse(localStorage.getItem("users")).uId;
+                //修改购物车内的显示图片
+                data.giconimgsrc = data.giconimgsrc[0];
+                console.log(data)
+                //把data 通过ajax发送到 后台
+                $.ajax({
+                    url: "./api/addCart",
+                    type: "post",
+                    data: data,
+                    headers: {
+                        token: localStorage.getItem("token")
+                    },
+                }).then(function (res) {
+                    layer.msg("已成功加入购物车");
+                })
+
+            })
+        })
 </script>
+
+
+
+
+<!-- <script src="./js/detial.js"></script> -->
+<script src="./js/stepNumber.js"></script>

@@ -1,11 +1,5 @@
 const mysql = require("mysql");
-let db = mysql.createConnection({
-    host: "127.0.0.1",
-    port: 3306,
-    user: 'root',
-    password: "root",
-    database: "shasha" //还没创建库和表
-});
+let db = mysql.createConnection(require("./../../config/index").config)
 
 //链接
 function conn() {
@@ -30,7 +24,7 @@ function execAsync(sql, params) {
 }
 
 function close() {
-    db.resume(); //
+    db.resume(); 
 }
 
 module.exports = {
