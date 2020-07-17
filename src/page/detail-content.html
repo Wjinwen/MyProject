@@ -223,6 +223,18 @@
 <!-- 动态更改详情页内容  数据驱动显示 -->
 <script>
         $(function(){
+            function sendAjax(url,obj,fn){
+                $.ajax({
+                    url: url,
+                    type: "post",
+                    headers: {
+                        token: localStorage.getItem("token")
+                    },
+                    data: obj,
+                }).then(function(res){
+                    fn(res);
+                })
+            }
             function addScript(url){
                 var script = document.createElement('script');
                 script.setAttribute('type','text/JavaScript');
@@ -304,43 +316,113 @@
                         <a href="#" target="_blank"><span itemprop="name">${targetGood.gtitle}</span></a>`;
                 $(".detail-info .right .title").html(goodTitle);
                 $(".add_cart").data("info",JSON.stringify(targetGood));
+                showSmallCart();
                 addScript("./js/detial.js");
                 
+
+                $(".add_cart").on("click",function () {
+                    var data = JSON.parse($(this).data('info'));
+                
+                    delete(data.gdiscount);
+                    delete(data.geffect);
+                    delete(data.goldpirce);
+                    delete(data.gposition);
+                    delete(data.gspecification);
+                    //添加购买数量
+                    data.num = $(".quantity").val();
+                    //添加购物人
+                    data.uid = JSON.parse(localStorage.getItem("users")).uId;
+                    //修改购物车内的显示图片
+                    data.giconimgsrc = data.giconimgsrc[0];
+                    console.log(data)
+                    //把data 通过ajax发送到 后台
+                    $.ajax({
+                        url: "./api/addCart",
+                        type: "post",
+                        data: data,
+                        headers: {
+                            token: localStorage.getItem("token")
+                        },
+                    }).then(function (res) {
+                        layer.msg("已成功加入购物车");
+                        showSmallCart();
+                    })
+
+                })
+                
+
+
+
+                function showSmallCart(){
+                    sendAjax("./api/getCart",{uid: JSON.parse(localStorage.getItem("users")).uId},function(res){
+                        if (!res.data) {
+                            $("#cart-box").find(".content_null").css("display","block").siblings(".content_catalog").css("display","none")
+                            $("#cart-box").find(".shop-cart").children("em").text("0");
+                            return;
+                        }else{
+                            // console.log(res.data);
+                            let cartList=res.data;
+                            // console.log(cartList)
+                            let smallCartsSumpirce=0;
+                            let smallCartsSumlength=0;
+                            $("#cart-box").find(".shop-cart").children("em").text(cartList.length);
+                            $("#cart-box").find(".content_null").css("display","none").siblings(".content_catalog").css("display","block")
+                            var cartStr=`<ul id="shoppingCartDetails"><!-- 每一个li 是一个购物车内的商品 -->`;
+                            cartList.forEach((item,index)=>{
+                                cartStr+=`<li class="border-dashed"><!-- left 是一个图片 --><span class="box_left"><a href="./detail.html?gid=${item.gid}">`;
+                                cartStr+=`<img src="${item.giconimgsrc}" ></a></span><!-- right 有品牌 标题 价格 数量 --><span class="box_right">`;
+                                cartStr+=`<h1><a href="javascript:;">${item.gbrand}</a><br><a href="javascript:;">${item.gtitle}</a></h1><b class="fon-price">`;
+                                cartStr+=`HK$<span>${item.gnowpirce}</span><em> x ${item.num}</em></b><a class="btn-delete" data-info='${JSON.stringify(item)}'>X</a></span></li></ul>`;
+                                smallCartsSumpirce+=item.gnowpirce*item.num;
+                                smallCartsSumlength+=item.num;
+                            });
+                            cartStr+=`</ul>`;
+                            $(".rank-list").html(cartStr);
+
+                            let cartMsgStr=`<div class="fon-price" align="left" style="width:40%">&nbsp;<span class="fon-MSYH">共</span>`;
+                                cartMsgStr+=`&nbsp;<b><span id="basketitem">${smallCartsSumlength}</span></b>&nbsp;<span class="fon-MSYH">件商品</span></div>`;
+                                cartMsgStr+=`<div class="fon-price" align="right" style="width:60%"><span class="fon-MSYH">共计：</span>`;
+                                cartMsgStr+=`<b>HK$<span id="baskettotal">${smallCartsSumpirce}</span></b></div><a href="./shoppingCar.html">`;
+                                cartMsgStr+=`<div class="btn_checkout">查看购物车</div></a>`;      
+                            $(".content_notice").html(cartMsgStr);
+                            $(".rank-list").on("click",".btn-delete",function(){
+                                var self = this;
+                                var cid = $(this).data("info").cid;
+                                var delNum= $(this).data("info").num;
+                                var delPirce= ($(this).data("info").gnowpirce)*delNum;
+                                console.log(cid,delNum,delPirce)
+                                layer.confirm('是否将该商品从购物车中删除?', {btn: ['确认','取消'] }, 
+                                    function(){
+                                        sendAjax("./api/delete",{cid},function(res){
+                                            layer.msg("删除成功");
+                                            $(self).parents(".border-dashed").remove();
+                                            setTimeout(function(){
+                                                console.log(res);
+                                                $("#basketitem").text($("#basketitem").text()-delNum);
+                                                $("#baskettotal").text($("#baskettotal").text()-delPirce);
+                                                var cartxtNum=$("#cart-box").find(".shop-cart").children("em").text();
+                                                if(cartxtNum!=0){
+                                                    $("#cart-box").find(".shop-cart").children("em").text(cartxtNum-1);
+                                                    if(cartxtNum==1){
+                                                        $("#cart-box").find(".shop-cart").children("em").text(0)
+                                                        $("#cart-box").find(".content_null").css("display","block").siblings(".content_catalog").css("display","none");
+                                                    }
+                                                }
+                                            },100);
+                                        })
+                                    }, function(){return;}
+                                );
+                            });
+                        }
+                    })
+                }
+
+
                 
             })
         })
 
 
-        $(function () {
-            $(".add_cart").on("click",function () {
-                var data = JSON.parse($(this).data('info'));
-               
-                delete(data.gdiscount);
-                delete(data.geffect);
-                delete(data.goldpirce);
-                delete(data.gposition);
-                delete(data.gspecification);
-                //添加购买数量
-                data.num = $(".quantity").val();
-                //添加购物人
-                data.uid = JSON.parse(localStorage.getItem("users")).uId;
-                //修改购物车内的显示图片
-                data.giconimgsrc = data.giconimgsrc[0];
-                console.log(data)
-                //把data 通过ajax发送到 后台
-                $.ajax({
-                    url: "./api/addCart",
-                    type: "post",
-                    data: data,
-                    headers: {
-                        token: localStorage.getItem("token")
-                    },
-                }).then(function (res) {
-                    layer.msg("已成功加入购物车");
-                })
-
-            })
-        })
 </script>
 
 
